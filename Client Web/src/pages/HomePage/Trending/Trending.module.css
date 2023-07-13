@@ -1,0 +1,13 @@
+.trending img {
+  width: 100%;
+}
+.trending h5 {
+  margin-bottom: 1rem;
+}
+.trending img:hover {
+  cursor: pointer;
+  filter: brightness(120%) contrast(99%);
+}
+.trending-list {
+  width: 250px;
+}

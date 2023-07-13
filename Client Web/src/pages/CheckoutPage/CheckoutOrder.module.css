@@ -1,0 +1,21 @@
+.order {
+  background-color: #f6f9f6;
+  padding: 2rem;
+  align-self: flex-start;
+}
+.order h2 {
+  margin-bottom: 2rem;
+}
+.item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #aaa;
+}
+.bold {
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .order {
+    align-self: auto;
+  }
+}

@@ -1,0 +1,28 @@
+.information {
+  margin: 2rem 0;
+}
+.background {
+  background-color: #f8f9fa;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  padding: 3rem 5vw;
+}
+.information h5 {
+  font-weight: 500;
+}
+.information p {
+  color: #aaa;
+}
+.information input {
+  border: 1px solid #aaa;
+  width: 300px;
+  padding: 1rem;
+  outline: none;
+}
+.information button {
+  color: #fff;
+  background-color: #383838;
+  font-style: normal;
+  padding: 1rem;
+  border: 1px solid #383838;
+}

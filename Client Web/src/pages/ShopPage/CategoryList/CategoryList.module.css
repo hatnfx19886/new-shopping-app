@@ -1,0 +1,35 @@
+.category {
+  width: 200px;
+  line-height: 2.5;
+}
+.category h4 {
+  margin-bottom: 1rem;
+}
+.category ul {
+  list-style: none;
+  padding-left: 0;
+}
+.category li {
+  padding-left: 1rem;
+}
+.apple {
+  background-color: #000;
+  color: #fff;
+  font-weight: 500;
+}
+.inactive {
+  color: #aaa;
+}
+.inactive:hover,
+.inactive:active {
+  color: #f5ce5a;
+  cursor: pointer;
+}
+.active {
+  color: #f5ce5a;
+}
+.group {
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #f6f9f6;
+}

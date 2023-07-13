@@ -1,0 +1,43 @@
+.header {
+  padding: 1rem;
+  color: #000;
+}
+
+.header nav {
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+}
+
+.header h1 {
+  text-align: center;
+  font-weight: 400;
+}
+
+.header svg {
+  font-size: 24px;
+  color: #aaa;
+  padding-bottom: 2px;
+  margin-right: 4px;
+}
+.logout:hover {
+  color: #f5ce5a;
+  cursor: pointer;
+}
+
+a:hover,
+a:active,
+.header .active {
+  color: #f5ce5a;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  .header svg {
+    display: none;
+  }
+}

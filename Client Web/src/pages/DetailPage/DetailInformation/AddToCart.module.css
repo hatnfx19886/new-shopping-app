@@ -1,0 +1,28 @@
+.added {
+  text-align: center;
+  font-style: normal;
+}
+.added a {
+  color: var(--bs-link-color);
+}
+.add {
+  margin-top: 2rem;
+}
+.add button {
+  border-top: 2px solid #212529;
+}
+svg.action {
+  cursor: pointer;
+}
+.quantity {
+  border: 1px solid #aaa;
+  padding: 0.5rem 1rem;
+}
+.increment {
+  margin-left: 4rem;
+}
+.amount {
+  margin: 0 1rem;
+  font-size: 18px;
+  font-style: normal;
+}

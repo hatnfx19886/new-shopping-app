@@ -1,0 +1,14 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  column-gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 992px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 2rem;
+  }
+}

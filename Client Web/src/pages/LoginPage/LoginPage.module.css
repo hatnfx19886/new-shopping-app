@@ -1,0 +1,49 @@
+.banner {
+  background-image: url(/img/banner1.jpg);
+  background-size: 125%;
+  min-height: 100vh;
+  position: relative;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0, 0, 20px, #000;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: #fff;
+}
+.container h1 {
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+.container a {
+  color: var(--bs-link-color);
+}
+.container button {
+  display: block;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 1rem 0;
+}
+
+.form div {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-top: none;
+  text-align: left;
+}
+.form div:first-child {
+  border-top: 1px solid #ddd;
+}
+.form input {
+  background-color: inherit;
+  border: none;
+  outline: none;
+}
+.form label {
+  width: 100px;
+}

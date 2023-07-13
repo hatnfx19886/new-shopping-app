@@ -1,0 +1,20 @@
+.container p,
+.container img {
+  padding: 0 0.5rem;
+}
+.head,
+.row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
+  row-gap: 1rem;
+  text-align: center;
+  align-items: center;
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+
+.head {
+  margin-top: 2rem;
+  text-transform: uppercase;
+  background-color: #f6f9f6;
+}

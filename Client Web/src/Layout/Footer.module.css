@@ -1,0 +1,14 @@
+.footer {
+  color: #fff;
+  background-color: #111;
+  padding: 3rem 0;
+}
+.footer a {
+  display: block;
+  color: #555;
+  font-size: 14px;
+}
+.footer h4 {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}

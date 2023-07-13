@@ -1,0 +1,12 @@
+.amount {
+  margin: 0 1rem;
+  font-size: 18px;
+  font-style: normal;
+}
+svg.action {
+  cursor: pointer;
+}
+.trash {
+  color: #aaa;
+  cursor: pointer;
+}

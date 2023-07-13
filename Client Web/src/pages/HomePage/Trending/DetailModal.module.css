@@ -1,0 +1,32 @@
+.detail_modal {
+  background-color: #fff;
+  padding: 2rem;
+  max-width: 800px;
+  width: 95vw;
+  position: fixed;
+  top: calc(18vh);
+  left: calc((100vw - 800px) / 2);
+  opacity: 0;
+  overflow: hidden;
+  z-index: 50;
+}
+.close {
+  font-weight: 800;
+  text-align: right;
+  cursor: pointer;
+}
+.detail_modal img {
+  width: 100%;
+  height: auto;
+}
+.detail_modal button {
+  margin-top: 0.5rem;
+}
+.detail_modal svg {
+  margin-right: 0.5rem;
+}
+@media (max-width: 840px) {
+  .detail_modal {
+    left: calc(5vw / 2);
+  }
+}
