@@ -15,7 +15,7 @@
 }
 
 .header svg {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #aaa;
   padding-bottom: 2px;
   margin-right: 4px;
@@ -33,11 +33,6 @@ a:active,
 
 @media (max-width: 768px) {
   .header h1 {
-    display: none;
-  }
-}
-@media (max-width: 550px) {
-  .header svg {
     display: none;
   }
 }

@@ -26,3 +26,12 @@
   padding: 1rem;
   border: 1px solid #383838;
 }
+
+@media (max-width: 720px) {
+  .sub {
+    flex-direction: column;
+  }
+  .sub div {
+    margin-bottom: 0.5rem;
+  }
+}

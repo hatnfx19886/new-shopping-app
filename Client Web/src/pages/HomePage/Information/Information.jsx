@@ -17,7 +17,7 @@ const Information = () => {
           <p>Free shipping worlwide</p>
         </div>
       </div>
-      <div className="flex-centered">
+      <div className={classes.sub + ' flex-centered'}>
         <div>
           <h5>LET'S BE FRIENDS!</h5>
           <p>Nisi nisi tempor consequat laboris nisi</p>

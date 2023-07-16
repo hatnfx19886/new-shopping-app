@@ -62,10 +62,10 @@ button {
   color: #aaa;
 }
 .smaller {
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 .larger {
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 .error {
   color: #ff0000;
@@ -81,4 +81,10 @@ p {
 }
 .break {
   word-break: break-all;
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
 }

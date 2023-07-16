@@ -10,3 +10,9 @@ svg.action {
   color: #aaa;
   cursor: pointer;
 }
+
+@media (max-width: 576px) {
+  .amount {
+    margin: 0 0.5rem;
+  }
+}
