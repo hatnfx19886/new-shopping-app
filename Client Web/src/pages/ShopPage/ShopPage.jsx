@@ -18,7 +18,7 @@ const ShopPage = () => {
     };
     const applyData = (data) => setList(data);
     sendRequest(requestConfig, applyData);
-  }, [sendRequest]);
+  }, []);
   const changeListHandler = (e) => {
     // All products
     if (e === 'All') {

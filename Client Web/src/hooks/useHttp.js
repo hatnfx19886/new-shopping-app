@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 import { useCookies } from 'react-cookie';
 
 const useHttp = () => {
@@ -6,7 +6,7 @@ const useHttp = () => {
   const [error, setError] = useState();
   const [cookies] = useCookies();
 
-  const sendRequest = useCallback(async (requestConfig, applyData) => {
+  const sendRequest = async (requestConfig, applyData) => {
     setIsLoading(true);
     setError(null);
     try {
@@ -30,7 +30,7 @@ const useHttp = () => {
       );
     }
     setIsLoading(false);
-  }, []);
+  };
   return {
     isLoading,
     error,

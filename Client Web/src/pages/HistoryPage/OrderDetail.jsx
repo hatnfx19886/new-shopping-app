@@ -15,7 +15,7 @@ const OrderDetail = () => {
     };
     const applyData = (data) => setOrder(data);
     sendRequest(requestConfig, applyData);
-  }, [sendRequest, id]);
+  }, [id]);
   return (
     <>
       {isLoading && <Spinner variant="dark" />}

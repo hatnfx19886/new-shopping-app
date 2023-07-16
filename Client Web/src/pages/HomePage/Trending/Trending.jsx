@@ -21,7 +21,7 @@ const Trending = () => {
     };
     const applyData = (data) => setTrendingList(data);
     sendRequest(requestConfig, applyData);
-  }, [sendRequest]);
+  }, []);
   const showDetailHandler = (e) => {
     setShowDetail(true);
     setDetail(trendingList.find((x) => x._id === e.target.id));

@@ -16,7 +16,7 @@ const HistoryPage = () => {
     };
     const applyData = (data) => setOrderList(data || []);
     sendRequest(requestConfig, applyData);
-  }, [sendRequest]);
+  }, []);
   return (
     <>
       <div className="flex-centered header">

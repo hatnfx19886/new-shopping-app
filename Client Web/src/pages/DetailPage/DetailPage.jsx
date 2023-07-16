@@ -22,7 +22,7 @@ const DetailPage = () => {
       setRelatedList(data.relatedList);
     };
     sendRequest(requestConfig, applyData);
-  }, [sendRequest, id]);
+  }, [id]);
   return (
     <>
       {isLoading && <Spinner variant="dark" />}
