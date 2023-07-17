@@ -58,7 +58,6 @@ exports.signin = (req, res, next) => {
             res.status(400).json({ message: 'Your password is incorrect' });
         })
         .catch((err) => {
-          console.log(err);
           res.status(500).json({ message: 'Some thing went wrong' });
         });
     }

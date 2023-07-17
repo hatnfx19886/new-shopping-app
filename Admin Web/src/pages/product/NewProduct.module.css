@@ -1,0 +1,20 @@
+.form {
+  background-color: #f4f8fb;
+  padding: 1rem 2rem;
+}
+
+.form label {
+  display: block;
+  margin-top: 2rem;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.form button {
+  margin-top: 2rem;
+}

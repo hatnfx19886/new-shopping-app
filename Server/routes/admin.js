@@ -8,18 +8,18 @@ const {
   updateProduct,
 } = require('../controllers/admin/product');
 const { login, check } = require('../controllers/admin/user');
-const { isAdmin } = require('../middleware/auth');
+const { isAdmin, isLogin } = require('../middleware/auth');
 
 const router = express.Router();
 
 router.post('/user/login', login);
 router.get('/user/check', check);
 
-router.get('/', isAdmin, dashboard);
-router.get('/product', isAdmin, getAllProduct);
-router.get('/product/find/:id', isAdmin, getOneProduct);
-router.get('/product/delete/:id', isAdmin, deleteProduct);
-router.post('/product/add', isAdmin, addProduct);
-router.post('/product/update/:id', isAdmin, updateProduct);
+router.get('/', isLogin, isAdmin, dashboard);
+router.get('/product', isLogin, isAdmin, getAllProduct);
+router.get('/product/find/:id', isLogin, isAdmin, getOneProduct);
+router.get('/product/delete/:id', isLogin, isAdmin, deleteProduct);
+router.post('/product/add', isLogin, isAdmin, addProduct);
+router.post('/product/update/:id', isLogin, isAdmin, updateProduct);
 
 module.exports = router;

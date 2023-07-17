@@ -14,12 +14,7 @@ const app = express();
 app.use(helmet());
 app.use(express.json());
 
-const links = [
-  'http://localhost:5173',
-  'http://localhost:3001',
-  'https://shopping-app-admin.web.app',
-  'https://shopping-app-16273.web.app',
-];
+const links = ['http://localhost:3000', 'http://localhost:3001'];
 const corsOption = {
   origin: (origin, calback) => {
     if (links.includes(origin)) {

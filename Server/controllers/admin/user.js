@@ -1,5 +1,7 @@
-const User = require('../../models/User');
+const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+require('dotenv').config();
+const User = require('../../models/User');
 
 exports.login = (req, res, next) => {
   User.findOne({ email: req.body.email })
@@ -11,7 +13,13 @@ exports.login = (req, res, next) => {
           .compare(req.body.password, user.password)
           .then((result) => {
             if (result) {
-              res.json(user);
+              const token = jwt.sign({ id: user._id }, process.env.TOKEN_KEY, {
+                expiresIn: '7d',
+              });
+              res.json({
+                role: user.role,
+                token,
+              });
             } else
               res.status(400).json({ message: 'Your password is incorrect' });
           })
@@ -25,12 +33,17 @@ exports.login = (req, res, next) => {
     );
 };
 
-exports.check = (req, res, next) => {
-  User.findOne({ _id: req.query.userId })
-    .then((data) => {
-      if (!data || data.role === 'user') {
-        res.json(0);
-      } else res.json(data);
-    })
-    .catch(() => res.json(0));
+exports.check = async (req, res, next) => {
+  try {
+    const token = req.headers['authorization']?.split(' ')[1];
+    if (!token) throw new Error('Fail');
+    const { id } = jwt.verify(token, process.env.TOKEN_KEY);
+    const user = await User.findOne({ _id: id });
+    if (!user || user.role !== 'admin') throw new Error('Fail');
+    res.json({
+      role: 'admin',
+    });
+  } catch (err) {
+    res.json(0);
+  }
 };

@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 2rem;
+  background-color: #fff;
+}
+
+.container P {
+  color: #aaa;
+  font-size: 14px;
+}
+.container svg {
+  font-size: 20px;
+  color: #aaa;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid #eee;
+}
