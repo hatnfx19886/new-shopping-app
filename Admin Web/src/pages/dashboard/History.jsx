@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Spinner } from 'react-bootstrap';
+import { Table, Spinner } from 'react-bootstrap';
 import useHttp from '../../hooks/useHttp';
 import classes from './History.module.css';
 
@@ -20,30 +20,34 @@ const History = () => {
       {!isLoading && !error && (
         <div className={classes.container}>
           <h3>History</h3>
-          <div className={classes.table}>
-            <div className={classes.row}>
-              <p>ID User</p>
-              <p>Name</p>
-              <p>Phone</p>
-              <p>Address</p>
-              <p>Total</p>
-              <p>Delivery</p>
-              <p>Status</p>
-              <p>Detail</p>
-            </div>
-            {list.map((x) => (
-              <div className={classes.row} key={x._id}>
-                <p>{x.user._id}</p>
-                <p>{x.user.fullName}</p>
-                <p>{x.user.phone}</p>
-                <p>{x.address}</p>
-                <p>{x.total.toLocaleString()}</p>
-                <p>{x.delivery}</p>
-                <p>{x.status}</p>
-                <p className={classes.view}>View</p>
-              </div>
-            ))}
-          </div>
+          <Table striped bordered>
+            <thead>
+              <tr>
+                <th>ID User</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Total</th>
+                <th>Delivery</th>
+                <th>Status</th>
+                <th>Detail</th>
+              </tr>
+            </thead>
+            <tbody>
+              {list.map((x) => (
+                <tr key={x._id}>
+                  <td>{x.user._id}</td>
+                  <td>{x.user.fullName}</td>
+                  <td>{x.user.phone}</td>
+                  <td>{x.address}</td>
+                  <td>{x.total.toLocaleString()}</td>
+                  <td>{x.delivery}</td>
+                  <td>{x.status}</td>
+                  <td className={classes.view}>View</td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
         </div>
       )}
     </>

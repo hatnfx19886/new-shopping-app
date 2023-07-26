@@ -35,7 +35,9 @@ const useHttp = () => {
     setIsLoading(false);
   };
   return {
+    setIsLoading,
     isLoading,
+    setError,
     error,
     sendRequest,
   };

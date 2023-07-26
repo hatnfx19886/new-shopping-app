@@ -37,13 +37,19 @@
   color: #7451f8;
 }
 
-.item {
+.item,
+.active {
   padding: 0.5rem;
+  border-radius: 8px;
 }
 
 .item:hover,
 .item:active {
   cursor: pointer;
   background-color: #eee;
-  border-radius: 8px;
+}
+
+.sidebar .active {
+  color: #7451f8;
+  background-color: #eee;
 }

@@ -52,7 +52,7 @@ const NewProduct = () => {
     const images = data.images;
     const imgs = [];
     const formData = new FormData();
-    formData.set('key', process.env.REACT_APP_IMGBB_API_KEY);
+    formData.set('key', import.meta.env.VITE_IMGBB_API_KEY);
     for (let i = 0; i < images.length; i++) {
       formData.set('image', images[i]);
       try {
@@ -127,14 +127,22 @@ const NewProduct = () => {
       setValue('price', data.price);
       setValue('count', data.count);
     };
-    id && sendRequest(requestConfig, applyData);
+    const resetForm = () => {
+      setValue('name', '');
+      setValue('category', '');
+      setValue('shortDesc', '');
+      setValue('longDesc', '');
+      setValue('price', '');
+      setValue('count', '');
+    };
+    id ? sendRequest(requestConfig, applyData) : resetForm();
   }, [id]);
   return (
     <>
       <h3>{id ? 'Update Product' : 'New Product'}</h3>
       <form
         className={classes.form}
-        onSubmit={!isLoading && handleSubmit(id ? updateProduct : addProduct)}
+        onSubmit={handleSubmit(id ? updateProduct : addProduct)}
       >
         <label>Product Name</label>
         <input type="text" {...register('name')} />

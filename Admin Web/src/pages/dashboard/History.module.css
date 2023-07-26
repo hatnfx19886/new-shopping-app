@@ -4,21 +4,6 @@
   background-color: #fff;
 }
 
-.table {
-  margin-top: 1rem;
-  border: 0.5px solid #eee;
-}
-.table p {
-  border: 0.5px solid #eee;
-}
-.table div:nth-child(even) {
-  background-color: #f4f8fb;
-}
-.row {
-  display: grid;
-  grid-template-columns: 2fr repeat(7, 1fr);
-}
-.view {
+.container .view {
   color: #22ca80;
-  padding: 0.5rem 1rem;
 }

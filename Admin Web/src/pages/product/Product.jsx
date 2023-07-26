@@ -29,6 +29,7 @@ const Product = () => {
       {!isLoading && !error && (
         <>
           <input
+            style={{ padding: '0.5rem', width: '20%' }}
             type="text"
             placeholder="Enter Search!"
             onChange={(e) =>

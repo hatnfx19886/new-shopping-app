@@ -21,7 +21,7 @@ const Action = (props) => {
     <>
       <Button
         variant="success"
-        onClick={() => navigate('/products/add', { state: { id: props.id } })}
+        onClick={() => navigate('/add-product', { state: { id: props.id } })}
       >
         Update
       </Button>

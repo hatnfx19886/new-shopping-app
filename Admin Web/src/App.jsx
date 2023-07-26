@@ -23,7 +23,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/products" element={<Product />} />
-            <Route path="/products/add" element={<NewProduct />} />
+            <Route path="/add-product" element={<NewProduct />} />
             <Route path="*" element={<h1>404 Page Not Found</h1>} />
           </Routes>
         </Suspense>
